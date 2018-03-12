@@ -22,7 +22,6 @@ $("#addCharacter").on("click", function (event) {
 
 renderButtons();
 
-
 $("button").on("click", function displayCharacterInfo() {
   var characterName = $(this).attr("data-name");
 
@@ -32,9 +31,9 @@ $("button").on("click", function displayCharacterInfo() {
 
   // Performing an AJAX request with the queryURL
   $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
+    url: queryURL,
+    method: "GET"
+  })
     .then(function (response) {
       console.log(queryURL);
 
@@ -47,6 +46,7 @@ $("button").on("click", function displayCharacterInfo() {
 
         // Creating and storing a div tag
         var characterDiv = $("<div>");
+        characterDiv.addClass("ri");
 
         // Creating a paragraph tag with the result item's rating
         var p = $("<p>").text("Rating: " + results[i].rating);
@@ -60,8 +60,6 @@ $("button").on("click", function displayCharacterInfo() {
         characterImage.attr("data-state", "still");
         characterImage.addClass("gif");
 
-
-        // Appending the paragraph and image tag to the animalDiv
         characterDiv.append(p);
         characterDiv.append(characterImage);
 
@@ -70,6 +68,7 @@ $("button").on("click", function displayCharacterInfo() {
         $("#characters").prepend(characterDiv);
       }
       $(document).on("click", ".character", displayCharacterInfo);
+
 
       $(".gif").on("click", function () {
         var state = $(this).attr("data-state");

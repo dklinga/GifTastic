@@ -2,6 +2,26 @@ button,div,form,input{
   margin: 10px;}
 
   body {
-      background-color:lightslategray;
+      background-color:#F5FFFA;
+
   }
 
+  .background {
+    background-color: #629d9c;
+    background-image: url("../images/milky.jpg");
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  .add {
+    font-size: 40px;
+  }
+
+  .container-fluid {
+    background-color: aqua;
+  }
+
+  .ri {
+    float: left;
+
+  }

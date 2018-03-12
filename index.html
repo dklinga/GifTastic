@@ -13,26 +13,29 @@
 
 </head>
 
-<body>
-    <div class="jumbotron">
-        <h1 class="display-4">Carter, Bella and Alex's Gif Character Generator!!!</h1>
-        <hr class="my-4">
-        <p class="lead">
-            <button type="button" class="btn btn-info" id="characterButtons" role="alert">
-            </button>
-        </p>
+<div class="jumbotron jumbotron-fluid background">
+    <div class="container">
+        <h1 class="display-4 text-info">Carter's Gif Generator!!!</h1>
     </div>
+</div>
+
+
+<body>
+
+    <div type="button" class="btn btn-dark" id="characterButtons"></div>
 
 
     <form id="character-form">
-        <label for="character-input" class="alert alert-light" role="alert">Add a Character</label>
+        <label for="character-input" class="add" role="alert">Add a Character Button</label>
         <br>
         <input type="text" id="character-input">
         <br>
-        <input type="button" class="btn btn-info" id="addCharacter" type="submit" value="Submit">
+        <input type="button" class="btn btn-dark" id="addCharacter" type="submit" value="Submit">
     </form>
 
-    <div id="characters"></div>
+    <div class="container container-fluid images">
+        <div id="characters"></div>
+    </div>
 
     <!-- jquery links-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
