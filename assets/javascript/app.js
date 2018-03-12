@@ -24,7 +24,6 @@ renderButtons();
 
 
 $("button").on("click", function displayCharacterInfo() {
-  // Grabbing and storing the data-animal property value from the button
   var characterName = $(this).attr("data-name");
 
   // Constructing a queryURL using the animal name
@@ -33,15 +32,13 @@ $("button").on("click", function displayCharacterInfo() {
 
   // Performing an AJAX request with the queryURL
   $.ajax({
-    url: queryURL,
-    method: "GET"
-  })
-    // After data comes back from the request
+      url: queryURL,
+      method: "GET"
+    })
     .then(function (response) {
       console.log(queryURL);
 
       console.log(response);
-      // storing the data from the AJAX request in the results variable
       var results = response.data;
       console.log(results);
 
@@ -69,7 +66,7 @@ $("button").on("click", function displayCharacterInfo() {
         characterDiv.append(characterImage);
 
 
-        // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
+        // Prependng the div to html
         $("#characters").prepend(characterDiv);
       }
       $(document).on("click", ".character", displayCharacterInfo);
@@ -86,8 +83,6 @@ $("button").on("click", function displayCharacterInfo() {
         }
       });
 
-
     });
-
 
 });

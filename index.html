@@ -10,31 +10,29 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <style type="text/css">
-        button,
-        div,
-        form,
-        input {
-          margin: 10px;
-        }
-      </style>
+
 </head>
 
 <body>
-
-    <div type="button" class="btn btn-primary" id="characterButtons">
-
+    <div class="jumbotron">
+        <h1 class="display-4">Carter, Bella and Alex's Gif Character Generator!!!</h1>
+        <hr class="my-4">
+        <p class="lead">
+            <button type="button" class="btn btn-info" id="characterButtons" role="alert">
+            </button>
+        </p>
     </div>
+
 
     <form id="character-form">
-        <label for="character-input">Add a character</label><br>
-        <input type="text" id="character-input"><br>
-        <input id="addCharacter" type="submit" value="submit">
+        <label for="character-input" class="alert alert-light" role="alert">Add a Character</label>
+        <br>
+        <input type="text" id="character-input">
+        <br>
+        <input type="button" class="btn btn-info" id="addCharacter" type="submit" value="Submit">
     </form>
 
-    <div id="characters">
-
-    </div>
+    <div id="characters"></div>
 
     <!-- jquery links-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
